@@ -1,0 +1,4 @@
+FROM ubuntu:23.10
+RUN apt -y update && apt -y upgrade && apt -y install libc++1 libssl3 libusb-1.0-0-dev iproute2
+COPY a-bins/many-abci /
+ENTRYPOINT ["/many-abci"]
